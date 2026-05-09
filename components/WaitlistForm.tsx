@@ -76,7 +76,7 @@ export default function WaitlistForm() {
               </>
             )}
           </button>
-          <p style={{ fontSize: '12px', color: '#aaa', textAlign: 'center', marginTop: '4px' }}>
+          <p style={{ fontSize: '12px', color: '#ffffff', textAlign: 'center', marginTop: '4px' }}>
             확인 메일이 스팸함에 있을 수 있어요 📬
           </p>
         </form>
