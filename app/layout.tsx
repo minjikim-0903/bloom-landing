@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Bloom — 꽃집 가지 않아도 괜찮아요',
+  title: 'Bloom — 꽃집 직접 찾지 않아도 괜찮아요',
   description:
     '기념일, 선물, 일상의 꽃까지. Bloom에서 간편하게 꽃을 주문하세요. AI 꽃 추천으로 어떤 꽃을 골라야 할지 고민하지 않아도 됩니다.',
   keywords: ['꽃 주문', '꽃 배달', '꽃집', '기념일 꽃', '꽃 선물', 'Bloom'],
   openGraph: {
-    title: 'Bloom — 꽃집 가지 않아도 괜찮아요',
+    title: 'Bloom — 꽃집 직접 찾지 않아도 괜찮아요',
     description:
       '기념일, 선물, 일상의 꽃까지. Bloom에서 간편하게 꽃을 주문하세요.',
     type: 'website',
