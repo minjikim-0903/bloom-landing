@@ -18,7 +18,7 @@ export default function Hero() {
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[var(--text-primary)] leading-tight tracking-tight mb-5">
-          꽃집 가지 않아도
+          꽃집 직접 찾지 않아도
           <br />
           <span className="text-[var(--primary)]">괜찮아요</span>
         </h1>

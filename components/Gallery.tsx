@@ -37,13 +37,13 @@ export default function Gallery() {
       <div style={{ maxWidth: '980px', margin: '0 auto' }}>
         <div style={{ marginBottom: '48px' }}>
           <p style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '12px' }}>
-            인스피레이션
+            자랑하기
           </p>
           <h2 style={{ fontSize: '40px', fontWeight: 600, lineHeight: 1.1, letterSpacing: '-0.4px', color: 'var(--ink)' }}>
             꽃으로 꾸민 공간들
           </h2>
           <p style={{ fontSize: '17px', fontWeight: 400, lineHeight: 1.5, color: 'var(--muted)', marginTop: '12px' }}>
-            Bloom 유저들이 직접 꾸민 공간이에요. 당신의 공간도 함께해요.
+            구매한 꽃을 어떻게 꾸몄는지 자랑해요. 당신의 공간도 Bloom에서 빛날 수 있어요.
           </p>
         </div>
 
