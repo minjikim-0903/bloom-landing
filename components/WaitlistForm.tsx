@@ -72,9 +72,13 @@ export default function WaitlistForm() {
               <>
                 출시 알림 받기
                 <ArrowRight size={18} strokeWidth={2} />
+
               </>
             )}
           </button>
+          <p style={{ fontSize: '12px', color: '#aaa', textAlign: 'center', marginTop: '4px' }}>
+            확인 메일이 스팸함에 있을 수 있어요 📬
+          </p>
         </form>
       ) : null}
     </>

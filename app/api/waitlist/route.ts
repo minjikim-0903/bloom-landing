@@ -72,7 +72,11 @@ export async function POST(request: Request) {
           <!-- Footer -->
           <tr>
             <td style="padding:24px 40px 40px;border-top:1px solid #F9C8D9;">
-              <p style="margin:0;font-size:13px;color:#7A6670;">— Bloom</p>
+              <p style="margin:0 0 8px;font-size:13px;color:#7A6670;">— Bloom</p>
+              <p style="margin:0;font-size:11px;color:#bbb;line-height:1.6;">
+                본 메일은 Bloom 출시 알림을 신청하신 분께 발송됩니다.<br/>
+                수신을 원하지 않으시면 <a href="mailto:hello@bloomday.co.kr" style="color:#F48FB1;">hello@bloomday.co.kr</a>로 알려주세요.
+              </p>
             </td>
           </tr>
 
