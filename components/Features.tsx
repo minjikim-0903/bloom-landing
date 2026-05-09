@@ -20,32 +20,32 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-20 px-5 bg-white">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--text-primary)] mb-3">
+    <section id="features" style={{ background: 'var(--canvas-parchment)', padding: '80px 24px' }}>
+      <div style={{ maxWidth: '980px', margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <h2 style={{ fontSize: '40px', fontWeight: 600, lineHeight: 1.10, color: 'var(--ink)', marginBottom: '12px' }}>
             주요 기능
           </h2>
-          <p className="text-[var(--text-secondary)] text-lg">
+          <p style={{ fontSize: '17px', fontWeight: 400, lineHeight: 1.47, letterSpacing: '-0.374px', color: 'var(--muted)' }}>
             꽃 주문의 모든 불편함을 없앴어요
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
           {features.map((feature) => {
             const Icon = feature.icon
             return (
               <article
                 key={feature.title}
-                className="text-center p-8 rounded-2xl bg-[var(--surface)] transition-all hover:-translate-y-1"
+                style={{ background: 'var(--canvas)', border: '1px solid var(--hairline)', borderRadius: '18px', padding: '24px' }}
               >
-                <div className="w-14 h-14 rounded-2xl bg-[var(--primary-light)] flex items-center justify-center mx-auto mb-5">
-                  <Icon size={24} color="var(--primary)" strokeWidth={1.8} />
+                <div style={{ width: '40px', height: '40px', borderRadius: '8px', background: 'rgba(0,0,0,0.04)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
+                  <Icon size={18} color="var(--ink)" strokeWidth={1.8} />
                 </div>
-                <h3 className="text-lg font-bold text-[var(--text-primary)] mb-3">
+                <h3 style={{ fontSize: '17px', fontWeight: 600, lineHeight: 1.24, letterSpacing: '-0.374px', color: 'var(--ink)', marginBottom: '8px' }}>
                   {feature.title}
                 </h3>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p style={{ fontSize: '17px', fontWeight: 400, lineHeight: 1.47, letterSpacing: '-0.374px', color: 'var(--muted)' }}>
                   {feature.description}
                 </p>
               </article>

@@ -1,13 +1,13 @@
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-[var(--border)]">
-      <nav className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
-        <span className="text-xl font-bold text-[var(--primary)]">
+    <header style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, background: 'var(--surface-black)', height: '44px', display: 'flex', alignItems: 'center' }}>
+      <nav style={{ width: '100%', maxWidth: '980px', margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <span style={{ color: 'var(--on-dark)', fontSize: '12px', fontWeight: 600, letterSpacing: '-0.12px' }}>
           Bloom
         </span>
         <a
           href="#cta"
-          className="text-sm font-semibold text-white bg-[var(--primary)] px-4 py-2 rounded-xl transition-all hover:bg-[var(--primary-dark)] active:scale-95"
+          style={{ background: 'var(--primary)', color: 'var(--on-primary)', borderRadius: '9999px', padding: '8px 18px', fontSize: '12px', fontWeight: 400, letterSpacing: '-0.12px', textDecoration: 'none', display: 'inline-block' }}
         >
           출시 알림 받기
         </a>
