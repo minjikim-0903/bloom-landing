@@ -43,6 +43,7 @@ const features = [
     tagColor: 'var(--muted)',
     border: true,
     wide: true,
+    comingSoon: true,
   },
 ]
 
