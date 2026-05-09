@@ -39,8 +39,8 @@ export default function Image() {
         </div>
 
         {/* 슬로건 */}
-        <div style={{ fontSize: '28px', fontWeight: 400, color: '#555', letterSpacing: '-0.5px' }}>
-          꽃집 직접 찾지 않아도 괜찮아요
+        <div style={{ fontSize: '26px', fontWeight: 400, color: '#888', letterSpacing: '0.5px' }}>
+          Your flower, your way
         </div>
       </div>
     ),
