@@ -60,16 +60,16 @@ export default function AppFeatures() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
           {features.map((f) => (
             <article
               key={f.title}
+              className={f.wide ? 'sm:col-span-2' : ''}
               style={{
                 background: f.bg,
                 border: f.border ? '1px solid var(--hairline)' : 'none',
                 borderRadius: '18px',
                 padding: '32px',
-                gridColumn: f.wide ? 'span 2' : undefined,
                 boxShadow: f.border ? '0 1px 4px rgba(0,0,0,0.06)' : '0 4px 20px rgba(0,0,0,0.12)',
               }}
             >
