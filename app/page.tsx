@@ -1,8 +1,8 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import PainPoints from '@/components/PainPoints'
-import Features from '@/components/Features'
-import Target from '@/components/Target'
+import AppFeatures from '@/components/AppFeatures'
+import Gallery from '@/components/Gallery'
 import CTASection from '@/components/CTASection'
 import Footer from '@/components/Footer'
 
@@ -13,8 +13,8 @@ export default function Home() {
       <main>
         <Hero />
         <PainPoints />
-        <Features />
-        <Target />
+        <AppFeatures />
+        <Gallery />
         <CTASection />
       </main>
       <Footer />

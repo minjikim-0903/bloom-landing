@@ -2,27 +2,26 @@
 
 import { useState } from 'react'
 import { ArrowRight, CheckCircle, Loader } from 'lucide-react'
-import { supabase } from '@/lib/supabase'
 
 export default function WaitlistForm() {
-  const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (!name.trim() || !phone.trim()) return
+    if (!email.trim()) return
 
     setStatus('loading')
     setErrorMsg('')
 
-    const { error } = await supabase.from('waitlist').insert({
-      name: name.trim(),
-      phone: phone.trim(),
+    const res = await fetch('/api/waitlist', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.trim() }),
     })
 
-    if (error) {
+    if (!res.ok) {
       setStatus('error')
       setErrorMsg('신청 중 오류가 발생했어요. 다시 시도해주세요.')
       return
@@ -44,20 +43,13 @@ export default function WaitlistForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full max-w-sm mx-auto">
       <input
-        type="text"
-        placeholder="이름"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        type="email"
+        placeholder="이메일 주소"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
         required
-        className="w-full px-4 py-3.5 rounded-xl text-[#222222] text-sm font-medium placeholder:text-[#aaa] outline-none focus:ring-2 focus:ring-white/50"
-      />
-      <input
-        type="tel"
-        placeholder="전화번호 (010-0000-0000)"
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
-        required
-        className="w-full px-4 py-3.5 rounded-xl text-[#222222] text-sm font-medium placeholder:text-[#aaa] outline-none focus:ring-2 focus:ring-white/50"
+        className="w-full px-4 py-3.5 rounded-xl text-[#2E2E2E] text-sm font-medium placeholder:text-[#aaa] outline-none focus:ring-2 focus:ring-white/50"
+        style={{ background: '#ffffff' }}
       />
       {errorMsg && (
         <p className="text-white/90 text-xs text-center">{errorMsg}</p>
