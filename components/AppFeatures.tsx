@@ -60,7 +60,7 @@ export default function AppFeatures() {
           </h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {features.map((f) => (
             <article
               key={f.title}
