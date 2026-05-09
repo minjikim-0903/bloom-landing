@@ -3,49 +3,49 @@ import { Heart, Star, Leaf } from 'lucide-react'
 const targets = [
   {
     icon: Heart,
-    title: '기념일을 잊지 않고 싶은 분',
-    description: '연인, 부모님, 친구의 특별한 날. 미리 준비하지 않아도 당일에 바로 주문할 수 있어요.',
+    title: '기념일을 챙기고 싶은 분',
+    description: '연인, 부모님, 소중한 사람의 기념일을 꽃으로 더 특별하게 만들고 싶은 분.',
   },
   {
     icon: Star,
-    title: '마음을 꽃으로 전하고 싶은 분',
-    description: '고맙다, 수고했다, 잘 될 거야 — 말보다 꽃이 더 잘 전달될 때가 있어요.',
+    title: '소중한 사람에게 선물하고 싶은 분',
+    description: '감사 인사, 축하, 위로 — 마음을 담은 꽃 선물을 고민 없이 보내고 싶은 분.',
   },
   {
     icon: Leaf,
-    title: '일상에 작은 꽃을 두고 싶은 분',
-    description: '거창하지 않아도 돼요. 책상 위에 작은 꽃병 하나가 하루를 바꿔줄 수 있어요.',
+    title: '일상에 꽃을 들이고 싶은 분',
+    description: '집 한 켠에 작은 꽃 하나로 일상을 더 따뜻하고 아름답게 채우고 싶은 분.',
   },
 ]
 
 export default function Target() {
   return (
-    <section style={{ background: 'var(--canvas)', padding: '80px 24px' }}>
-      <div style={{ maxWidth: '980px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <h2 style={{ fontSize: '40px', fontWeight: 600, lineHeight: 1.10, color: 'var(--ink)', marginBottom: '12px' }}>
-            꽃이 필요한 순간은 늘 있어요
+    <section className="py-20 px-5 bg-[var(--surface)]">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--text-primary)] mb-3">
+            이런 분들을 위해 만들었어요
           </h2>
-          <p style={{ fontSize: '17px', fontWeight: 400, lineHeight: 1.47, letterSpacing: '-0.374px', color: 'var(--muted)' }}>
-            Bloom은 그 순간마다 함께하려고 만들었어요
+          <p className="text-[var(--text-secondary)] text-lg">
+            꽃이 필요한 모든 순간, Bloom이 함께할게요
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {targets.map((target) => {
             const Icon = target.icon
             return (
               <article
                 key={target.title}
-                style={{ background: 'var(--canvas-parchment)', borderRadius: '18px', padding: '24px' }}
+                className="bg-white rounded-2xl p-7 card-shadow transition-all hover:-translate-y-1 hover:shadow-xl text-center"
               >
-                <div style={{ width: '40px', height: '40px', borderRadius: '8px', background: 'rgba(0,0,0,0.04)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-                  <Icon size={18} color="var(--ink)" strokeWidth={1.8} />
+                <div className="w-12 h-12 rounded-2xl bg-[var(--primary-light)] flex items-center justify-center mx-auto mb-4">
+                  <Icon size={22} color="var(--primary)" strokeWidth={1.8} />
                 </div>
-                <h3 style={{ fontSize: '17px', fontWeight: 600, lineHeight: 1.24, letterSpacing: '-0.374px', color: 'var(--ink)', marginBottom: '8px' }}>
+                <h3 className="text-base font-bold text-[var(--text-primary)] mb-2">
                   {target.title}
                 </h3>
-                <p style={{ fontSize: '17px', fontWeight: 400, lineHeight: 1.47, letterSpacing: '-0.374px', color: 'var(--muted)' }}>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                   {target.description}
                 </p>
               </article>

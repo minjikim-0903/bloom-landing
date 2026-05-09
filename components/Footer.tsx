@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
-    <footer style={{ background: 'var(--canvas-parchment)', padding: '48px 24px' }}>
-      <div style={{ maxWidth: '980px', margin: '0 auto', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
-        <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink-muted-80)', letterSpacing: '-0.12px' }}>Bloom</span>
-        <p style={{ fontSize: '12px', fontWeight: 400, letterSpacing: '-0.12px', color: 'var(--muted)' }}>
-          © 2026 Bloom. All rights reserved.
+    <footer className="py-8 px-5 bg-white border-t border-[var(--border)]">
+      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+        <span className="text-base font-bold text-[var(--primary)]">🌸 Bloom</span>
+        <p className="text-sm text-[var(--text-secondary)]">
+          © 2025 Bloom. All rights reserved.
         </p>
       </div>
     </footer>
